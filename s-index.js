@@ -20,8 +20,8 @@ const csvWriter = createObjectCsvWriter({
 
 const sortByWordCountAndLength = (arr)=> {
     arr.map(item=>{
-        const wordCount = (item && item.name && item.name.split(' ').length) || 0;
-        item.length = (item && item.name && item.name.length) || 0;
+        const wordCount = (item && item.text && item.text.split(' ').length) || 0;
+        item.length = (item && item.text && item.text.length) || 0;
         item.wordCount = wordCount;
         return item;
 
